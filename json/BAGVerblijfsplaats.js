@@ -1,0 +1,15 @@
+var BAGVerblijfsobject = { 'type': 'FeatureCollection','features': [ { 'geometry': { 'type': 'Point', 'coordinates': [4.758464271083533,52.488727686029705]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 904 1566JG Assendelft Area: 98'},'id': 0},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758710839811346,52.48898963252112]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 914 1566JG Assendelft Area: 109'},'id': 1},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758768833858387,52.48905285283745]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 916 1566JG Assendelft Area: 82'},'id': 2},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.7585225200818195,52.48877293266576]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 906 1566JG Assendelft Area: 102'},'id': 3},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.759157582722516,52.48944790261558]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 928 1566JG Assendelft Area: 105'},'id': 4},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.7582741634555275,52.488636802398744]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 902 1566JG Assendelft Area: 563'},'id': 5},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758652718132597,52.4889353990774]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 912 1566JG Assendelft Area: 74'},'id': 6},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758609318676177,52.4888812436232]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 910 1566JG Assendelft Area: 97'},'id': 7},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758565919325919,52.48882708815266]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 908 1566JG Assendelft Area: 97'},'id': 8},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758913500337235,52.489233370754995]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 922 1566JG Assendelft Area: 140'},'id': 9},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758855378090024,52.48917913741258]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 920 1566JG Assendelft Area: 109'},'id': 10},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758797511522672,52.48910693023844]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 918 1566JG Assendelft Area: 110'},'id': 11},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.759029234369607,52.48937778495808]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 926 1566JG Assendelft Area: 99'},'id': 12},
+{ 'geometry': { 'type': 'Point', 'coordinates': [4.758971367259054,52.489305577871065]}, 'type': 'Feature', 'properties': { 'popupContent': 'This is address 924 1566JG Assendelft Area: 84'},'id': 13}
+]}
