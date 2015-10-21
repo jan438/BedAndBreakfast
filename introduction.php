@@ -2,18 +2,42 @@
 
 <?php include 'banner.html';?>
 
+<link rel="stylesheet" href="release/side-comments.css" />
+<link rel="stylesheet" href="release/themes/default-theme.css" />
+<link rel="stylesheet" href="support/css/basics.css" />
+
+<script src="release/side-comments.js"></script>
+<script src="support/test_data.js"></script>
+<script>
+    $(document).ready(function(){
+      var SideComments = require('side-comments');
+      window.sideComments = new SideComments('#commentable-container', currentUser, existingComments);
+      window.sideComments.on('commentPosted', function( comment ) {
+        comment.id = parseInt(Math.random() * (100000 - 1) + 1);
+        sideComments.insertComment(comment);
+      });
+      window.sideComments.on('commentDeleted', function( comment ) {
+        sideComments.removeComment(comment.sectionId, comment.id);
+      });
+    });
+</script>
 <div id="information" class="spacer reserve-info ">
 	<div class="container">
 
        	<h1 class="title" id="introduction">Introductie</h1>
 	<div class="row" id="nl_introduction">
+		<div id="commentable-container" class="container commentable-container">
+		<p data-section-id="1" class="commentable-section">
+		We bieden Bed and Breakfast aan, maar het verblijf kan ook als groepsaccommodatie fungeren voor bijvoorbeeld vergaderingen, bedrijfsuitjes, teambuilding, workshops, feest, bruiloft, tuinfeest, proeverijen...! Christine, uw gastvrouw organiseert zelf ook regelmatig cursussen Frans voor bedrijven en particulieren.</p>
+		<p data-section-id="2" class="commentable-section">
+		In onze boerderij is een van de voormalige koestallen omgetoverd in een vakantiehuis met 4 luxe slaapkamers, een grote woonkamer en een open keuken. Bij de ingang van ons gastenverblijf is een groot  terras op het zuiden waar het in de zomer heerlijk genieten is.</p>
+		<p data-section-id="3" class="commentable-section">
+		Wanneer u via de brede pui naar binnen loopt, komt u in een sfeervolle eetzaal met tafeltjes, een bar en een open keuken. De parketvloer en de houten wanden met koeienraampjes  in landelijke stijl stralen de sfeer van authentieke boerenkamers uit. Het prachtige vierkante rieten dak met de mooie originele ronde schoorsteen staat er weer netjes bij.</p>
+		</div>
               <div class="col-sm-6"><p>“La Normande” biedt een bijzondere locatie aan, met een weidse uitzicht en zee aan ruimte en rust. Ideale plek voor comfortabele  vergaderingen, workshops en  reünies voor familie-uitjes en bedrijven. Onze mooie lichte en sfeervolle vergaderruimte biedt een intieme, huiselijke  en ontspannen sfeer aan groepen van 6 tot 20 personen.Moet je een familieuitje organiseren? Daar helpen we u graag mee: Workshop Sushis' maken, een Golf clinic samen uitproberen op de prachtig West-Friese Golfbaan om de hoek, of lekker op de sloten varen zoals vroeger met ijzeren schuiten...</p></div>
               <div class="col-sm-6"><p>Tussen Hoorn, Enkhuizen en Medemblik, op 40 km afstand van Amsterdam-Noord, bieden we een knus en rustgevend accommodatie midden inde polders, op enkele kilometers van het Ijsselmeer, prachtig ingericht voor uw feestje, uitje, vergadering of workshop. In de prachtige woonkamer kunt u met een groep tot 20 personen  zitten, vergaderen, lekker eten, enz. We hebben ook 4 luxe slaapkamers voor 2  tot 4 personen met eigen badkamer, internetaansluiting en televisie en ook, heel comfortabele bedden.</p></div>
-              <div class="col-sm-6"><p>We bieden Bed and Breakfast aan, maar het verblijf kan ook als groepsaccommodatie fungeren voor bijvoorbeeld vergaderingen, bedrijfsuitjes, teambuilding, workshops, feest, bruiloft, tuinfeest, proeverijen...! Christine, uw gastvrouw organiseert zelf ook regelmatig cursussen Frans voor bedrijven en particulieren.
-</p></div>
-              <div class="col-sm-6"><p>In onze boerderij is een van de voormalige koestallen omgetoverd in een vakantiehuis met 4 luxe slaapkamers, een grote woonkamer en een open keuken. Bij de ingang van ons gastenverblijf is een groot  terras op het zuiden waar het in de zomer heerlijk genieten is. Wanneer u via de brede pui naar binnen loopt, komt u in een sfeervolle eetzaal met tafeltjes, een bar en een open keuken. De parketvloer en de houten wanden met koeienraampjes  in landelijke stijl stralen de sfeer van authentieke boerenkamers uit. Het prachtige vierkante rieten dak met de mooie originele ronde schoorsteen staat er weer netjes bij.</p></div>
               <div class="col-sm-6"><p>
-Het ontbijt kan zowel binnen als op het terras worden geserveerd.  Alle ruimtes liggen gelijkvloers, om iedereen te kunnen verwelkomen, ook mensen die moeilijk ter been zijn en rolstoelgebruikers. De landelijke sfeer zal vooral mensen aanspreken die van de natuur houden of even tot rust willen komen. Ook gasten die hier voor zakelijke doeleinden komen, kunnen hier een prachtige, rustige plek vinden om te verblijven.</p></div>                      
+Het ontbijt kan zowel binnen als op het terras worden geserveerd.  Alle ruimtes liggen gelijkvloers, om iedereen te kunnen verwelkomen, ook mensen die moeilijk ter been zijn en rolstoelgebruikers. De landelijke sfeer zal vooral mensen aanspreken die van de natuur houden of even tot rust willen komen. Ook gasten die hier voor zakelijke doeleinden komen, kunnen hier een prachtige, rustige plek vinden om te verblijven.</p></div>
 	</div> <!-- row -->
 
 	<div class="row" id="fr_introduction">
@@ -133,8 +157,9 @@ errasse aveccour et jardin fleurissant Parkingcollectif.
 Binnenwijzendin 1857. Thisdistinctive property is located in the Grootslag polder on the outskirts ofWestwoud, a picturesque WestFriesian village, and situated between the historical harbour towns of Hoorn,Enkhuizen and Medemblik.</p></div>
               <div class="col-sm-6"><p>The owner and your hostess, Christine Bataille, lives at the front of the house with her family, whilst to the rear the former animal quarters have been tastefully converted into the Bed & Breakfast accommodation. Adjoining the property are a large, sunny terrace and lawned area which border fields and meadows grazed by sheep and cows for as far as the eye can see. In springtime these fields are magnificently carpeted with the famous Dutch tulips!!</p></div>
        </div> <!-- row -->
-       <div class="spacer">
-       		<div class="embed-responsive embed-responsive-16by9">
+
+	<div class="spacer">
+		<div class="embed-responsive embed-responsive-16by9">
 <!--<iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/BQUL3z_JZo4" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
 			<video controls>
 			<source src="http://192.168.1.31/videos/B&B La Normande (Netherlands).mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
