@@ -23,6 +23,10 @@ Copyright (c) 2010-2012 Tween.js authors (https://github.com/tweenjs/tween.js).
 
 Copyright © 2015 Frederik De Bleser of opentype.js (https://github.com/nodebox/opentype.js/blob/master/LICENSE).
 
+ElevateZoom is dual licensed under both the MIT and GPL licenses.
+
+Copyright (c) 2014 Eric Anderson of SideComments.js (https://github.com/aroc/side-comments/blob/master/LICENSE).
+
 FullCalendar is released under the MIT license (http://fullcalendar.io/license/).
 
 Leaflet license (https://github.com/Leaflet/Leaflet/blob/master/LICENSE/).
