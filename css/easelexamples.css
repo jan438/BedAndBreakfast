@@ -2,12 +2,6 @@
 	background: white;
 }
 
-.content {
-	width: 960px;
-	height: 400px;
-	overflow: hidden;
-}
-
 .loading {
 	position: relative;
 }

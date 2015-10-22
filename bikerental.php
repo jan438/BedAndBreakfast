@@ -9,6 +9,7 @@
 <link href="css/easelexamples.css" rel="stylesheet" type="text/css"/>
 <script src="js/easelexamples.js"></script>
 <script src="js/easeljs-NEXT.min.js"></script>
+<script src="js/Slider.js"></script>
 
 <script type="text/javascript">
 var tr = $.tr.translator();
@@ -37,6 +38,7 @@ opentype.load('http://192.168.1.31/fonts/FiraSansMedium.woff', function(err, fon
 		<button id="nl_buttonbikerental" onclick="nl_init();">Click me</button>
 		<button id="fr_buttonbikerental" onclick="fr_init();">Click me</button>
 		<button id="en_buttonbikerental" onclick="en_init();">Click me</button>
+		<button id="de_buttonbikerental" onclick="de_init();">Click me</button>
 		<div> 
 			<canvas id="nl_Canvas" width="445" height="190"></canvas>
 		</div>
@@ -46,6 +48,10 @@ opentype.load('http://192.168.1.31/fonts/FiraSansMedium.woff', function(err, fon
 		<div>
 			<canvas id="en_Canvas" width="445" height="190"></canvas>
 		</div>
+		<div>
+			<canvas id="de_Canvas" width="445" height="190"></canvas>
+		</div>
+
 		</div> <!-- row -->
 		<div class="row" id="de_bikerental">
 			<br>
@@ -88,6 +94,9 @@ Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mi
 	var speed;
 	var star;
 	var scale;
+	var sliceContainer;
+	var sliceWidth;
+	var degToRad = Math.PI / 180;
 
 	function nl_init() {
 		examples.showDistractor();
@@ -99,7 +108,6 @@ Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mi
 		text.set({x: stage.canvas.width / 2, y: stage.canvas.height - 40});
 		text.textAlign = "center";
 	}
-
 	
 	function fr_init() {
 		angle = 0;
@@ -116,6 +124,17 @@ Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mi
 		img.onload = en_handleImageLoad;
 		img.src = "images/large/fietsverhuur.jpg";
 		angle = 0;
+	}
+
+	function de_init() {
+		examples.showDistractor();
+		stage = new createjs.Stage("de_Canvas");
+		stage.enableMouseOver();
+		createjs.Touch.enable(stage);
+		stage.mouseMoveOutside = true;
+		var img = new Image();
+		img.onload = de_handleImageLoad;
+		img.src = "images/large/fietsverhuur.jpg";
 	}
 
 	function handleComplete() {
@@ -246,6 +265,47 @@ Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mi
 		star.scaleX = star.scaleY = 1.5 + Math.sin(angle) * 3;
 		stage.update(event);
 		angle += 0.025;
+	}
+
+	function de_handleImageLoad(evt) {
+		examples.hideDistractor();
+		var img = evt.target, imgWidth = img.width, imgHeight = img.height, sliceCount = 6;
+		sliceWidth = imgWidth / sliceCount;
+		sliceContainer = new createjs.Container();
+		sliceContainer.x = stage.canvas.width / 2;
+		for (var i = 0; i < sliceCount; i++) {
+			var slice = new createjs.Bitmap(img);
+			slice.sourceRect = new createjs.Rectangle(sliceWidth * i, 0, sliceWidth, imgHeight);
+			slice.cache(0, 0, sliceWidth, imgHeight);
+			slice.filters = [new createjs.ColorMatrixFilter(new createjs.ColorMatrix())];
+			sliceContainer.addChild(slice);
+		}
+		var slider = new Slider(0, 50, 20, 5).set({x: 0, y: 0, value: 25});
+		slider.on("change", handleSliderChange, this);
+		stage.addChild(sliceContainer, slider);
+		updateEffect(slider.value);
+	}
+
+	function handleSliderChange(evt) {
+		updateEffect(evt.target.value);
+	}
+
+	function updateEffect(value) {
+		var l = sliceContainer.getNumChildren();
+		for (var i = 0; i < l; i++) {
+			var slice = sliceContainer.getChildAt(i);
+			slice.y = Math.sin(value * degToRad) * -sliceWidth / 2;
+			if (i % 2) {
+				slice.skewY = value;
+			} else {
+				slice.skewY = -value;
+				slice.y -= sliceWidth * Math.sin(slice.skewY * degToRad);
+			}
+			slice.x = sliceWidth * (i - l / 2) * Math.cos(slice.skewY * degToRad);
+			slice.filters[0].matrix.setColor(Math.sin(slice.skewY * degToRad) * -80);
+			slice.updateCache();
+		}
+		stage.update();
 	}
 </script>
 <?php include 'footer.php';?>
