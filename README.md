@@ -25,6 +25,8 @@ Copyright © 2015 Frederik De Bleser of opentype.js (https://github.com/nodebox/
 
 ElevateZoom is dual licensed under both the MIT and GPL licenses.
 
+EaselJS Copyright (c) 2014 gskinner.com, inc. (https://github.com/CreateJS/EaselJS);
+
 Copyright (c) 2014 Eric Anderson of SideComments.js (https://github.com/aroc/side-comments/blob/master/LICENSE).
 
 FullCalendar is released under the MIT license (http://fullcalendar.io/license/).
