@@ -8,7 +8,7 @@
 <link href="css/easelshared.css" rel="stylesheet" type="text/css"/>
 <link href="css/easelexamples.css" rel="stylesheet" type="text/css"/>
 <script src="js/easelexamples.js"></script>
-<script src="js/easeljs-NEXT.combined.js"></script>
+<script src="js/easeljs-NEXT.min.js"></script>
 
 <script type="text/javascript">
 var tr = $.tr.translator();
