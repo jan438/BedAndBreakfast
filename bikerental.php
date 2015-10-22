@@ -34,9 +34,13 @@ opentype.load('http://192.168.1.31/fonts/FiraSansMedium.woff', function(err, fon
 		<div class="row">
 		<header class="EaselJS">
 		</header>
-		<button onclick="init();">Click me</button> 
+		<button id="nl_buttonbikerental" onclick="nl_init();">Click me</button>
+		<button id="fr_buttonbikerental" onclick="fr_init();">Click me</button>
+		<div> 
+			<canvas id="nl_Canvas" width="445" height="190"></canvas>
+		</div>
 		<div>
-			<canvas id="testCanvas" width="445" height="190"></canvas>
+			<canvas id="fr_Canvas" width="445" height="190"></canvas>
 		</div>
 		</div> <!-- row -->
 		<div class="row" id="de_bikerental">
@@ -72,18 +76,34 @@ Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mi
 	var cursor;
 	var text;
 	var blur;
+	var img;
+	var bmp;
+	var angle;
+	var canvas;
+	var range;
+	var speed;
 
-	function init() {
+	function nl_init() {
 		examples.showDistractor();
 
 		image = new Image();
 		image.onload = handleComplete;
 		image.src = "images/large/fietsverhuur.jpg";
 
-		stage = new createjs.Stage("testCanvas");
+		stage = new createjs.Stage("nl_Canvas");
 		text = new createjs.Text("Loading...", "20px Arial", "#FFF");
 		text.set({x: stage.canvas.width / 2, y: stage.canvas.height - 40});
 		text.textAlign = "center";
+	}
+
+	
+	function fr_init() {
+		angle = 0;
+		range = 30;
+		speed = 0.02;
+		img = new Image();
+		img.onload = handleImageLoad;
+		img.src = "images/large/fietsverhuur.jpg";
 	}
 
 	function handleComplete() {
@@ -165,6 +185,29 @@ Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mi
 		}
 
 		stage.update();
+	}
+
+
+	function handleImageLoad() {
+		canvas = document.getElementById("fr_Canvas");
+		stage = new createjs.Stage(canvas);
+
+		bmp = new createjs.Bitmap(img).set({y: (canvas.height - img.height) / 2});
+		bmp.cache(0, 0, img.width, img.height);
+
+		stage.addChild(bmp);
+
+		createjs.Ticker.addEventListener("tick", tick);
+	}
+
+	function tick(event) {
+		angle += speed;
+
+		var value = (Math.sin(angle) + 1) / 2 * range;
+		bmp.updateCache();
+		bmp.filters = [new createjs.BlurFilter(value, value, 2)];
+
+		stage.update(event);
 	}
 </script>
 <?php include 'footer.php';?>
