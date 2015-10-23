@@ -54,7 +54,8 @@
 			"Walking, biking"		: "Marcher, Vélo",
 			"Visit, relax"			: "Visite, Détendez",
 			"Good food"			: "La bonne nourriture....",
-			"bikerental"			: "Location de vélos"
+			"bikerental"			: "Location de vélos",
+			"groups"			: "Groupes"
 		},
 		en : {
 			"Reserve"			: "Reserve",
@@ -110,7 +111,8 @@
 			"Walking, biking"		: "Walking, biking",
 			"Visit, relax"			: "Visit, relax",
 			"Good food"			: "Good food....",
-			"bikerental"			: "Bike rental"
+			"bikerental"			: "Bike rental",
+			"groups"			: "Groups"
 		},
 		de : {
 			"Reserve"			: "Reserve",
@@ -166,7 +168,8 @@
 			"Walking, biking"		: "Gehen, Radfahren",
 			"Visit, relax"			: "Besichtigung, Entspannen",
 			"Good food"			: "Gutes Essen....",
-			"bikerental"			: "Fahrradverleih"
+			"bikerental"			: "Fahrradverleih",
+			"groups"			: "Gruppen"
 		},
 		nl : {
 			"Reserve"			: "Reserveren",
@@ -222,7 +225,8 @@
 			"Walking, biking"		: "Wandelen, Fietsen",
 			"Visit, relax"			: "Bezoeken, Ontspannen",
 			"Good food"			: "Lekker Eten....",
-			"bikerental"			: "Fietsverhuur"
+			"bikerental"			: "Fietsverhuur",
+			"groups"			: "Groepen"
 		}
 	}
 
@@ -316,4 +320,6 @@
 		$('#target3').text(tr("Good food"));
 		$('#nav_bikerental').text(tr("bikerental"));
 		$('#fnav_bikerental').text(tr("bikerental"));
+		$('#nav_groups').text(tr("groups"));
+		$('#fnav_groups').text(tr("groups"));
 	}

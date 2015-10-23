@@ -28,6 +28,7 @@
 			<li><a href="gallery.php" id="fnav_gallery">Gallerij</a></li>
 			<li><a href="location.php" id="fnav_location">Locatie</a></li>
 			<li><a href="surroundings.php" id="fnav_surroundings">Omgeving</a></li>					    				<li><a href="bikerental.php" id="fnav_bikerental">Fietsverhuur</a></li>
+			<li><a href="groups.php" id="fnav_groups">Groepen</a></li>
                     </ul>
                 </div>
             </div>

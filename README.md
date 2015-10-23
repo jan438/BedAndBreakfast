@@ -29,6 +29,8 @@ EaselJS Copyright (c) 2014 gskinner.com, inc. (https://github.com/CreateJS/Easel
 
 Copyright (c) 2014 Eric Anderson of SideComments.js (https://github.com/aroc/side-comments/blob/master/LICENSE).
 
+Lining.js Copyright (c) 2014 mzhou (https://github.com/zmmbreeze/lining.js/blob/master/MIT-LICENTSE.txt).
+
 FullCalendar is released under the MIT license (http://fullcalendar.io/license/).
 
 Leaflet license (https://github.com/Leaflet/Leaflet/blob/master/LICENSE/).
