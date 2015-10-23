@@ -60,7 +60,7 @@ opentype.load('http://192.168.1.31/fonts/FiraSansMedium.woff', function(err, fon
 Zwischen Polderlandschaft und IJsselmeer
 
 
-Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mit Haubergen, Weideland und Wassergraben. Die Umgebung ist super geeignet zum Spazieren gehen oder Fahrrad fahren. In der Umgebung ist ein Golfplatz. Museumliebhaber können Museen in den Nachbarsorten besuchen. Westwoud liegt zwischen Hoorn (7 kilometer), Enkhuizen (12 kilometer) und Medemblik (12 kilometer): drei schöne Hafenstädte am IJsselmeer.</p>
+<code>Westwoud</code> ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mit Haubergen, Weideland und Wassergraben. Die Umgebung ist super geeignet zum Spazieren gehen oder Fahrrad fahren. In der Umgebung ist ein Golfplatz. Museumliebhaber können Museen in den Nachbarsorten besuchen. <code>Westwoud</code> liegt zwischen Hoorn (7 kilometer), Enkhuizen (12 kilometer) und Medemblik (12 kilometer): drei schöne Hafenstädte am IJsselmeer.</p>
 
 		</div>	<!-- row -->
 	</div> <!-- container -->
@@ -280,7 +280,7 @@ Westwoud ist ein wesfriesisches Dorf in einer wunderschönen Polderlandschaft mi
 			slice.filters = [new createjs.ColorMatrixFilter(new createjs.ColorMatrix())];
 			sliceContainer.addChild(slice);
 		}
-		var slider = new Slider(0, 50, 20, 5).set({x: 0, y: 0, value: 25});
+		var slider = new Slider(0, 50, 80, 20).set({x: 0, y: 0, value: 25});
 		slider.on("change", handleSliderChange, this);
 		stage.addChild(sliceContainer, slider);
 		updateEffect(slider.value);
