@@ -3,7 +3,7 @@
     font-size: 32px;
     font-family: 'Dancing Script', serif;
 }
-.poem .line:nth-of-type(-n+2) {
+.poem .line:nth-last-of-type(2n) {
     font-size: 42px;
     color: #DA4453;
 }
