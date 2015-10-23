@@ -4,7 +4,6 @@
 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Calligraffitti|Inconsolata|Dancing+Script|Handlee|Allerta+Stencil' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/index.css" />
-<link rel="stylesheet" href="css/prism.css" />
 <script type="text/javascript" src="js/opentype.min.js"></script>
 <script type="text/javascript" src="js/lining.min.js"></script>
 <script type="text/javascript" src="js/lining.effect.min.js"></script>
