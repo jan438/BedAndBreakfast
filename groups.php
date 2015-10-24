@@ -27,7 +27,7 @@ opentype.load('http://192.168.1.31/fonts/FiraSansMedium.woff', function(err, fon
 			<canvas id="canvas" width="500" height="75" class="text"></canvas>
 		</div> <!-- row -->
 		<div class="row">
-			<img src="images/photos/gallery/51-Oosterblokker op terras.jpg" alt="Groups" height="483" width="644">
+			<img src="images/photos/gallery/51-Oosterblokker op terras.jpg" alt="Groups" height="322" width="430">
 		</div> <!-- row -->
 
             <div data-lining class="poem preview">
