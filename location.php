@@ -322,11 +322,6 @@
 					serviceUrl: 'http://router.project-osrm.org/viaroute'
 				})
 			}).addTo(map);
-			L.control.weather({
-				units: "metric",
-				lang: $.cookie('language'),
-				template: '<div class="weatherIcon"><img src=":iconurl"></div><div>T: :temperature°C</div><div>H: :humidity%</div><div>W: :winddirection :windspeed m/s</div>',
-			}).addTo(map);
 			var geocoder = L.Control.Geocoder.nominatim({
 //				serviceUrl: "http://192.168.1.31/nominatim/"
 				serviceUrl: 'http://nominatim.openstreetmap.org/'

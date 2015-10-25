@@ -53,8 +53,6 @@
 <link rel="stylesheet" href="assets/leaflet/Control.MagnifyingGlass.css" />
 <script src="assets/leaflet/leaflet.magnifyingglass.js"></script>
 <script src="assets/leaflet/magnifying_button.js"></script>
-<link rel="stylesheet" href="assets/leaflet/Leaflet.Weather.css" />
-<script src="assets/leaflet/Leaflet.Weather.js"></script>
 <link rel="stylesheet" href="assets/leaflet/leaflet.fullscreen.css" />
 <script src="assets/leaflet/Leaflet.fullscreen.min.js"></script>
 <script src="assets/leaflet/MovingMarker.js"></script>
