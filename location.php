@@ -2,6 +2,8 @@
 
 <?php include 'banner.html';?>
 
+<script src="assets/leaflet/Leaflet.RevealOSM.js" type="text/javascript"></script>
+<link rel="stylesheet" href="assets/leaflet/Leaflet.RevealOSM.css" />
 <script src="json/sample-geojson.js" type="text/javascript"></script>
 <script src="json/netherlands_borders.js" type="text/javascript"></script>
 <script src="json/cuba_borders.js" type="text/javascript"></script>
@@ -135,6 +137,9 @@
 			transportMap = L.tileLayer(transportUrl, {attribution: thunAttrib});
 			map = L.map('map', {
 				zoom: 15,
+				revealOSMControl: true,
+				revealOSMControlOptions: {
+				queryTemplate: '[out:json];(node(around:{radius},{lat},{lng})[name];way(around:{radius},{lat},{lng})[name][highway];);out body qt 1;'},
 				contextmenu: true,
 				contextmenuWidth: 140,
 				contextmenuItems: [{
